@@ -1,0 +1,110 @@
+\documentclass{amsart}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% \swapnumbers
+% \pagestyle{headings}
+\parindent = 5 pt
+\parskip = 12 pt
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{heuristic}[theorem]{Heuristic}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{question}[theorem]{Question}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+\include{psfig}
+
+\begin{document}
+
+\title{Exercise 2.6.1}
+
+\author{Luqing Ye}
+\address{College of Science, Hangzhou Normal University,Hangzhou City,Zhejiang Province,China}
+\email{yeluqingmathematics@gmail.com}
+% \thanks{T. Tao is supported by a grant from the MacArthur Foundation, by NSF grant DMS-0649473, and by the NSF Waterman award.}
+
+
+
+
+\maketitle
+
+\setcounter{tocdepth}{2}
+% \tableofcontents
+\begin{exercise}[2.6.1]
+At which points are the following function $f$ differentiable?
+\begin{itemize}
+\item $f(z)=x$.
+
+\begin{proof}
+For a complex variable $z=x+yi$,$f(x+yi)=x+0i$.Define
+$g(x,y)=(x,0)$.Then 
+$$
+\begin{pmatrix}
+  \frac{\partial g_{1}}{\partial x}&\frac{\partial g_{1}}{\partial
+    y}\\
+  \frac{\partial g_{2}}{\partial x}&\frac{\partial g_2}{\partial
+    y}\\
+\end{pmatrix}=\begin{pmatrix}
+  1&0\\
+0&0
+\end{pmatrix}.
+$$
+So $f$ is nowhere differentiable.
+\end{proof}
+\item $f(z)=\overline{z}$.
+  \begin{proof}
+    For a complex number $z=x+iy$,$f(x+iy)=x-iy$.Define
+$g(x,y)=(x,-y)$,then
+$$
+\begin{pmatrix}
+  \frac{\partial g_1}{\partial x}&\frac{\partial g_1}{\partial y}\\
+\frac{\partial g_2}{\partial x}&\frac{\partial g_2}{\partial y}
+\end{pmatrix}=\begin{pmatrix}
+  1&0\\
+0&-1
+\end{pmatrix}.
+$$
+So $f$ is nowhere differentiable.
+  \end{proof}
+\item $f(z)=\overline{z}^2$.
+  \begin{proof}
+For a complex number $z=x+yi$,$f(z)=(x-yi)^2=(x^2-y^2)+(-2xy)i$.Define
+$g(x,y)=(x^2-y^2,-2xy)$.Then 
+$$
+\begin{pmatrix}
+  \frac{\partial g_1}{\partial x}&\frac{\partial g_1}{\partial y}\\
+\frac{\partial g_2}{\partial x}&\frac{\partial g_2}{\partial y}
+\end{pmatrix}=\begin{pmatrix}
+  2x&-2y\\
+-2y&-2x
+\end{pmatrix}.
+$$
+Let $f$ is differentiable at $(0,0)$.
+  \end{proof}
+\end{itemize}
+\end{exercise}
+
+
+
+
+
+\end{document} 
+
+
